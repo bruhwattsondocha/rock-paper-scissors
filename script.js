@@ -31,8 +31,8 @@ function getHumanChoice() {
   }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+let humanScore;
+let computerScore;
 
 function playRound(humanChoice, computerChoice) {
   // Compare choices of computer and human 
@@ -63,6 +63,18 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
+
+function playGame() {
+  humanScore = 0;
+  computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+  }
+  if (humanScore > computerScore) {
+    console.log('Human wins!');
+  } else {
+    console.log('Computer wins!');
+  }
+}

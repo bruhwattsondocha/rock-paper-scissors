@@ -39,25 +39,32 @@ function playRound(humanChoice, computerChoice) {
   // Print round winner
   // Increment winner score
   if (humanChoice === 'rock' && computerChoice === 'scissors') {
-    console.log('Round: You win! Rock beats Scissors!');
+    printChoice(humanChoice, computerChoice);
+    console.log('  Round: You win! Rock beats Scissors!');
     humanScore++;
   } else if (humanChoice === 'rock' && computerChoice === 'paper') {
-    console.log('Round: You lose! Paper beats Rock!');
+    printChoice(humanChoice, computerChoice)
+    console.log('  Round: You lose! Paper beats Rock!');
     computerScore++;
   } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-    console.log('Round: You win! Paper beats Rock!');
+    printChoice(humanChoice, computerChoice)
+    console.log('  Round: You win! Paper beats Rock!');
     humanScore++;
   } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-    console.log('Round: You lose! Scissors beat paper!');
+    printChoice(humanChoice, computerChoice)
+    console.log('  Round: You lose! Scissors beat paper!');
     computerScore++;
   } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-    console.log('Round: You win! Scissors beat Paper!');
+    printChoice(humanChoice, computerChoice)
+    console.log('  Round: You win! Scissors beat Paper!');
     humanScore++;
   } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-    console.log('Round: You lose! Rock beats Scissors!');
+    printChoice(humanChoice, computerChoice)
+    console.log('  Round: You lose! Rock beats Scissors!');
     computerScore++
   } else if (humanChoice === computerChoice) {
-    console.log("Round: It's a tie!");
+    printChoice(humanChoice, computerChoice)
+    console.log("  Round: It's a tie!");
     humanScore++;
     computerScore++;
   }
@@ -77,4 +84,10 @@ function playGame() {
   } else {
     console.log('Game: Computer wins!');
   }
+}
+
+// Function to print Human choice and Computer choice
+function printChoice(humanChoice, computerChoice) {
+  console.log(`Human: ${humanChoice}`);
+  console.log(`Computer: ${computerChoice}`);
 }

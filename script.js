@@ -14,3 +14,19 @@ function getComputerChoice() {
       break;
   }
 }
+
+function getHumanChoice() {
+  // Get input from user
+  // If its one of valid ones return it
+  // Also make sure capitalization doesn't matter
+  let choice = prompt('Rock, paper, scissors?').toLowerCase();
+  switch (choice) {
+    case 'rock':
+    case 'paper':
+    case 'scissors':
+      return choice;
+      break;
+    default:
+      alert('It is not rock, paper or scissors!');
+  }
+}

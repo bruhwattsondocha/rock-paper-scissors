@@ -87,10 +87,6 @@ function playRound(humanChoice, computerChoice) {
 // }
 
 // Function to print Human choice and Computer choice
-function printChoice(humanChoice, computerChoice) {
-  console.log(`Human: ${humanChoice}`);
-  console.log(`Computer: ${computerChoice}`);
-}
 
 const rockBtn = document.querySelector('#rockBtn');
 const paperBtn = document.querySelector('#paperBtn');
@@ -107,4 +103,12 @@ scissorsBtn.addEventListener('click', () => {
 });
 
 const resultDiv = document.querySelector('#result');
+let humanSelectionOnPage = document.querySelector('#human');
+let computerSelectionOnPage = document.querySelector('#computer');
+
+function printChoice(humanChoice, computerChoice) {
+  humanSelectionOnPage.innerHTML = `You have picked: <span>${humanChoice}</span>.`;
+  computerSelectionOnPage.innerHTML = `Computer have picked: <span>${computerChoice}</span>.`;
+  document.querySelectorAll('span').forEach(span => span.style.textDecoration = 'underline');
+}
 

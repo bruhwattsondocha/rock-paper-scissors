@@ -94,17 +94,17 @@ const scissorsBtn = document.querySelector('#scissorsBtn');
 
 rockBtn.addEventListener('click', () => {
   playRound('rock', getComputerChoice());
-  humanScoreCounter.textContent = `Human: ${humanScore}`;
+  humanScoreCounter.textContent = `You: ${humanScore}`;
   computerScoreCounter.textContent = `Computer: ${computerScore}`;
 });
 paperBtn.addEventListener('click', () => {
   playRound('paper', getComputerChoice())
-  humanScoreCounter.textContent = `Human: ${humanScore}`;
+  humanScoreCounter.textContent = `You: ${humanScore}`;
   computerScoreCounter.textContent = `Computer: ${computerScore}`;
 });
 scissorsBtn.addEventListener('click', () => {
   playRound('scissors', getComputerChoice());
-  humanScoreCounter.textContent = `Human: ${humanScore}`;
+  humanScoreCounter.textContent = `You: ${humanScore}`;
   computerScoreCounter.textContent = `Computer: ${computerScore}`;
 });
 

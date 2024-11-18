@@ -31,8 +31,8 @@ function getHumanChoice() {
   }
 }
 
-let humanScore;
-let computerScore;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   // Compare choices of computer and human 
@@ -94,12 +94,18 @@ const scissorsBtn = document.querySelector('#scissorsBtn');
 
 rockBtn.addEventListener('click', () => {
   playRound('rock', getComputerChoice());
+  humanScoreCounter.textContent = `Human: ${humanScore}`;
+  computerScoreCounter.textContent = `Computer: ${computerScore}`;
 });
 paperBtn.addEventListener('click', () => {
   playRound('paper', getComputerChoice())
+  humanScoreCounter.textContent = `Human: ${humanScore}`;
+  computerScoreCounter.textContent = `Computer: ${computerScore}`;
 });
 scissorsBtn.addEventListener('click', () => {
   playRound('scissors', getComputerChoice());
+  humanScoreCounter.textContent = `Human: ${humanScore}`;
+  computerScoreCounter.textContent = `Computer: ${computerScore}`;
 });
 
 const resultDiv = document.querySelector('#result');
@@ -111,4 +117,7 @@ function printChoice(humanChoice, computerChoice) {
   computerSelectionOnPage.innerHTML = `Computer have picked: <span>${computerChoice}</span>.`;
   document.querySelectorAll('span').forEach(span => span.style.textDecoration = 'underline');
 }
+
+let humanScoreCounter = document.querySelector('#humanScore');
+let computerScoreCounter = document.querySelector('#computerScore');
 

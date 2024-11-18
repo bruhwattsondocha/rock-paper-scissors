@@ -71,20 +71,20 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-function playGame() {
-  humanScore = 0;
-  computerScore = 0;
-  for (let i = 0; i < 5; i++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-  }
-  if (humanScore > computerScore) {
-    console.log('Game: Human wins!');
-  } else {
-    console.log('Game: Computer wins!');
-  }
-}
+// function playGame() {
+//   humanScore = 0;
+//   computerScore = 0;
+//   for (let i = 0; i < 5; i++) {
+//     const humanSelection = getHumanChoice();
+//     const computerSelection = getComputerChoice();
+//     playRound(humanSelection, computerSelection);
+//   }
+//   if (humanScore > computerScore) {
+//     console.log('Game: Human wins!');
+//   } else {
+//     console.log('Game: Computer wins!');
+//   }
+// }
 
 // Function to print Human choice and Computer choice
 function printChoice(humanChoice, computerChoice) {

@@ -68,7 +68,9 @@ function playRound(humanChoice, computerChoice) {
     humanScore++;
     computerScore++;
   }
-  if (humanScore === 5) {
+  if (humanScore === 5 && computerScore === 5) {
+    winner.innerHTML = "Wow, it's a tie!"
+  } else if (humanScore === 5) {
     winner.innerHTML = 'You won!</span>';
   } else if (computerScore === 5) {
     winner.innerHTML = 'Computer won!';

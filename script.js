@@ -68,7 +68,14 @@ function playRound(humanChoice, computerChoice) {
     humanScore++;
     computerScore++;
   }
+  if (humanScore === 5) {
+    winner.innerHTML = 'You won!</span>';
+  } else if (computerScore === 5) {
+    winner.innerHTML = 'Computer won!';
+  }
 }
+
+const winner = document.querySelector('#winner');
 
 
 // function playGame() {
@@ -121,3 +128,12 @@ function printChoice(humanChoice, computerChoice) {
 let humanScoreCounter = document.querySelector('#humanScore');
 let computerScoreCounter = document.querySelector('#computerScore');
 
+function restart() {
+  humanScore = 0;
+  computerScore = 0;
+  humanScoreCounter.innerText = '';
+  computerScoreCounter.innerText = '';
+  resultDiv.innerText = '';
+  humanSelectionOnPage.innerHTML = '';
+  computerSelectionOnPage.innerHTML = '';
+}

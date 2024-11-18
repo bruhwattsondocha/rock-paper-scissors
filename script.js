@@ -92,7 +92,16 @@ function printChoice(humanChoice, computerChoice) {
   console.log(`Computer: ${computerChoice}`);
 }
 
-const rockBtn = document.querySelector('rockBtn');
-const paperBtn = document.querySelector('paperBtn');
-const scissorsBtn = document.querySelector('scissorsBtn');
+const rockBtn = document.querySelector('#rockBtn');
+const paperBtn = document.querySelector('#paperBtn');
+const scissorsBtn = document.querySelector('#scissorsBtn');
 
+rockBtn.addEventListener('click', () => {
+  playRound('rock', getComputerChoice());
+});
+paperBtn.addEventListener('click', () => {
+  playRound('paper', getComputerChoice())
+});
+scissorsBtn.addEventListener('click', () => {
+  playRound('scissors', getComputerChoice());
+});

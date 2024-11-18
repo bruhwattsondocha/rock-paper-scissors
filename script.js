@@ -91,3 +91,8 @@ function printChoice(humanChoice, computerChoice) {
   console.log(`Human: ${humanChoice}`);
   console.log(`Computer: ${computerChoice}`);
 }
+
+const rockBtn = document.querySelector('rockBtn');
+const paperBtn = document.querySelector('paperBtn');
+const scissorsBtn = document.querySelector('scissorsBtn');
+

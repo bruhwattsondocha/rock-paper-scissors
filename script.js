@@ -40,31 +40,31 @@ function playRound(humanChoice, computerChoice) {
   // Increment winner score
   if (humanChoice === 'rock' && computerChoice === 'scissors') {
     printChoice(humanChoice, computerChoice);
-    console.log('  Round: You win! Rock beats Scissors!');
+    resultDiv.innerText = '  Round: You win! Rock beats Scissors!';
     humanScore++;
   } else if (humanChoice === 'rock' && computerChoice === 'paper') {
     printChoice(humanChoice, computerChoice)
-    console.log('  Round: You lose! Paper beats Rock!');
+    resultDiv.innerText = '  Round: You lose! Paper beats Rock!';
     computerScore++;
   } else if (humanChoice === 'paper' && computerChoice === 'rock') {
     printChoice(humanChoice, computerChoice)
-    console.log('  Round: You win! Paper beats Rock!');
+    resultDiv.innerText = '  Round: You win! Paper beats Rock!';
     humanScore++;
   } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
     printChoice(humanChoice, computerChoice)
-    console.log('  Round: You lose! Scissors beat paper!');
+    resultDiv.innerText = '  Round: You lose! Scissors beat paper!';
     computerScore++;
   } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
     printChoice(humanChoice, computerChoice)
-    console.log('  Round: You win! Scissors beat Paper!');
+    resultDiv.innerText = '  Round: You win! Scissors beat Paper!';
     humanScore++;
   } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
     printChoice(humanChoice, computerChoice)
-    console.log('  Round: You lose! Rock beats Scissors!');
+    resultDiv.innerText = '  Round: You lose! Rock beats Scissors!';
     computerScore++
   } else if (humanChoice === computerChoice) {
     printChoice(humanChoice, computerChoice)
-    console.log("  Round: It's a tie!");
+    resultDiv.innerText = "  Round: It's a tie!";
     humanScore++;
     computerScore++;
   }
@@ -105,3 +105,6 @@ paperBtn.addEventListener('click', () => {
 scissorsBtn.addEventListener('click', () => {
   playRound('scissors', getComputerChoice());
 });
+
+const resultDiv = document.querySelector('#result');
+
